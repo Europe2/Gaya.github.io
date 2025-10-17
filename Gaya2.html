@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MASTEX — Index</title>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+<style>
+:root{--neon:#00ff33;--neon2:#00e64d}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Share Tech Mono';background:linear-gradient(180deg,#001100 0%, #000 60%);color:var(--neon);display:flex;align-items:center;justify-content:center;height:100vh}
+.card{width:420px;background:rgba(0,0,0,0.6);padding:22px;border-radius:14px;border:2px solid rgba(0,255,0,0.06)}
+.logo{font-family:'VT323';font-size:48px;text-align:center;color:var(--neon);margin-bottom:6px}
+.input{display:flex;padding:10px;border-radius:8px;border:2px solid rgba(0,255,0,0.12);margin:10px 0}
+.input input{flex:1;background:transparent;border:0;color:var(--neon);outline:none;padding:6px}
+.btn{display:block;margin-top:12px;padding:12px;border-radius:10px;background:linear-gradient(180deg,var(--neon2),var(--neon));border:none;color:#001;font-weight:700;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">MASTEX.net</div>
+  <div style="text-align:center;color:rgba(0,255,0,0.6)">Formation des agents en cours...</div>
+  <div class="input"><input id="user" placeholder="Nom d'utilisateur / e-mail"></div>
+  <div class="input"><input id="pass" type="password" placeholder="Mot de passe"></div>
+  <button class="btn" id="go">S'inscrire / Simuler</button>
+  <div style="text-align:center;margin-top:10px"><a href="#" style="color:var(--neon)">Mot de passe oublié ?</a></div>
+</div>
+
+<script>
+document.getElementById('go').addEventListener('click', function(){
+  const u = document.getElementById('user').value.trim();
+  if(!u){ alert('Veuillez entrer un nom d\'utilisateur.'); return; }
+  // simulate signup then redirect to master-zone.html
+  window.location.href = 'master-zone.html';
+});
+</script>
+</body>
+</html>
